@@ -13,4 +13,11 @@ public class Imc {
     Usuario u;
     String resultado;
    
+    public String calcular(){
+        float res=u.peso/(u.altura*u.altura);
+        resultado = "Tu IMC es: "+res;
+        return resultado;
+    };
+    
+    
 }
