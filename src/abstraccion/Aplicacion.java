@@ -70,8 +70,11 @@ public class Aplicacion extends javax.swing.JFrame {
     private void botoncitoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botoncitoActionPerformed
         // TODO add your handling code here:
         Usuario davidgp=new Usuario();
-        davidgp.altura=1.75f;
-        davidgp.peso=70; 
+        // davidgp.altura=1.75f; no esta bien por el = 
+        //davidgp.peso=70;
+        
+        davidgp.setAltura(1.75f);
+        davidgp.setPeso(70);
         
         Imc modelo=new Imc();
         modelo.u=davidgp;
