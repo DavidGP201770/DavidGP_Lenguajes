@@ -5,19 +5,13 @@
  */
 package abstraccion;
 
-/**
- *
- * @author DUGPLPW7
- */
 public class Imc {
     Usuario u;
     String resultado;
-   
-    public String calcular(){
-        float res=u.getPeso()/(u.getAltura()*u.getAltura());
-        resultado = "Tu IMC es: "+res;
-        return resultado;
-    };
     
-    
+    public String  calcular(){
+       float mivalor= u.getPeso()/(u.getAltura()*u.getAltura());
+       resultado="Tu imc es "+mivalor;
+       return resultado;
+    }
 }

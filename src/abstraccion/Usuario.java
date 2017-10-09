@@ -5,14 +5,11 @@
  */
 package abstraccion;
 
-/**
- *
- * @author DUGPLPW7
- */
+
 public class Usuario {
-   private float peso;
-   private float altura;
-   
+ private float peso;
+ private float altura;  
+
     public float getPeso() {
         return peso;
     }
@@ -29,6 +26,5 @@ public class Usuario {
         this.altura = altura;
     }
 
-   
 
-}   
+}

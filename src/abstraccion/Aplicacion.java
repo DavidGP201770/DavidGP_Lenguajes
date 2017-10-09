@@ -7,7 +7,7 @@ package abstraccion;
 
 /**
  *
- * @author DUGPLPW7
+ * @author T-102
  */
 public class Aplicacion extends javax.swing.JFrame {
 
@@ -36,7 +36,7 @@ public class Aplicacion extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        botoncito.setText("Calcular IMC ");
+        botoncito.setText("Calcular imc");
         botoncito.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 botoncitoActionPerformed(evt);
@@ -45,37 +45,34 @@ public class Aplicacion extends javax.swing.JFrame {
 
         etiqueta.setText("Resultado");
 
-        jLabel1.setText("Peso");
+        jLabel1.setText("peso");
 
-        jLabel2.setText("Altura");
+        jLabel2.setText("altura");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
+                .addGap(45, 45, 45)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(etiqueta, javax.swing.GroupLayout.PREFERRED_SIZE, 308, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(etiqueta, javax.swing.GroupLayout.PREFERRED_SIZE, 402, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(33, 33, 33)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                             .addComponent(jLabel1)
                             .addComponent(jLabel2))
-                        .addGap(50, 50, 50)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(textoAltura)
-                            .addComponent(textoPeso, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(158, 158, 158)
-                        .addComponent(botoncito)))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addGap(30, 30, 30)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(botoncito)
+                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                .addComponent(textoPeso)
+                                .addComponent(textoAltura, javax.swing.GroupLayout.DEFAULT_SIZE, 96, Short.MAX_VALUE)))))
+                .addContainerGap(122, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(35, 35, 35)
+                .addGap(40, 40, 40)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(textoPeso, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel1))
@@ -83,11 +80,11 @@ public class Aplicacion extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(textoAltura, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel2))
-                .addGap(33, 33, 33)
-                .addComponent(botoncito)
                 .addGap(18, 18, 18)
+                .addComponent(botoncito)
+                .addGap(33, 33, 33)
                 .addComponent(etiqueta)
-                .addContainerGap(47, Short.MAX_VALUE))
+                .addContainerGap(114, Short.MAX_VALUE))
         );
 
         pack();
@@ -95,17 +92,20 @@ public class Aplicacion extends javax.swing.JFrame {
 
     private void botoncitoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botoncitoActionPerformed
         // TODO add your handling code here:
-        Usuario davidgp=new Usuario();
-        // davidgp.altura=1.75f; no esta bien por el = 
-        //davidgp.peso=70;
-        
-        davidgp.setAltura(1.75f);
-        davidgp.setPeso(70);
-        
+        Usuario jc=new Usuario();
+       // jc.peso=-70;
+      //  jc.altura=1.68f;
+         float peso= Float.parseFloat(textoPeso.getText());
+         jc.setPeso(70);
+         float altura= Float.parseFloat(textoAltura.getText());
+         jc.setAltura(1.60f); 
+         
         Imc modelo=new Imc();
-        modelo.u=davidgp;
-            etiqueta.setText(modelo.calcular());
-            
+        modelo.u=jc;
+                
+        etiqueta.setText(modelo.calcular());
+        
+        
     }//GEN-LAST:event_botoncitoActionPerformed
 
     /**
