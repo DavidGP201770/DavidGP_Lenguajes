@@ -9,12 +9,11 @@ package interfaces;
  *
  * @author DUGPLPW7
  */
-public interface Direccion {
-    public int x=2;
-    //METODO
-    public void generarDireccion();
-    //CONSTRUCTOR
-    public Direccion(){
+    public class Usuario implements Direccion {
         
-    }
-}
+        public void generarDireccion(){
+            
+        }
+    }   
+
+
