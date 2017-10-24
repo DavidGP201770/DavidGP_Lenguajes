@@ -7,13 +7,11 @@ package interfaces;
 
 /**
  *
- * @author DUGPLPW7
+ * @author rapid
  */
-    public class Usuario implements Direccion {
-        
-        public void generarDireccion(){
-            
-        }
-    }   
-
-
+public class ProbarInterfaces {
+    public static void main(String[] args) {
+     //   Direccion d=new Direccion();
+     Direccion d;
+    }
+}

@@ -7,14 +7,14 @@ package interfaces;
 
 /**
  *
- * @author DUGPLPW7
+ * @author rapid
  */
 public interface Direccion {
+    
     public int x=2;
-    //METODO
+   //Un metodo
     public void generarDireccion();
-    //CONSTRUCTOR
-    public Direccion(){
-        
-    }
+    //Pongamos un constructor
+   
+    
 }
