@@ -95,16 +95,22 @@ public class Aplicacion extends javax.swing.JFrame {
         Usuario jc=new Usuario();
        // jc.peso=-70;
       //  jc.altura=1.68f;
+      try{
          float peso= Float.parseFloat(textoPeso.getText());
-         jc.setPeso(70);
+         Validaciones.validarNumeroNoNegativo(peso);
+         jc.setPeso(peso);
          float altura= Float.parseFloat(textoAltura.getText());
-         jc.setAltura(1.60f); 
+         Validaciones.validarNumeroNoNegativo(altura);
+         jc.setAltura(altura); 
          
         Imc modelo=new Imc();
         modelo.u=jc;
                 
         etiqueta.setText(modelo.calcular());
-        
+      }catch (Exception e){
+      
+          etiqueta.setText(e.getMessage());
+     }
         
     }//GEN-LAST:event_botoncitoActionPerformed
 
